@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2FEF6MT2K"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-T2FEF6MT2K');
+	</script>
+
+	<title>bookitaka</title>
+	<!-- <meta http-equiv="Content-type" content="text/html;charset=UTF-8"> -->
+	<meta http-equiv="refresh" content="0;url=https://github.com/hyeokjulee/bookitaka">
+
+	<!-- <style>
+		/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+		/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+		body {
+			font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+			font-size: var(--vscode-markdown-font-size, 14px);
+			padding: 0 26px;
+			line-height: var(--vscode-markdown-line-height, 22px);
+			word-wrap: break-word;
+		}
+
+		#code-csp-warning {
+			position: fixed;
+			top: 0;
+			right: 0;
+			color: white;
+			margin: 16px;
+			text-align: center;
+			font-size: 12px;
+			font-family: sans-serif;
+			background-color: #444444;
+			cursor: pointer;
+			padding: 6px;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+		}
+
+		#code-csp-warning:hover {
+			text-decoration: none;
+			background-color: #007acc;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+		}
+
+		body.scrollBeyondLastLine {
+			margin-bottom: calc(100vh - 22px);
+		}
+
+		body.showEditorSelection .code-line {
+			position: relative;
+		}
+
+		body.showEditorSelection .code-active-line:before,
+		body.showEditorSelection .code-line:hover:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -12px;
+			height: 100%;
+		}
+
+		body.showEditorSelection li.code-active-line:before,
+		body.showEditorSelection li.code-line:hover:before {
+			left: -30px;
+		}
+
+		.vscode-light.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.15);
+		}
+
+		.vscode-light.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.40);
+		}
+
+		.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-dark.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.4);
+		}
+
+		.vscode-dark.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.60);
+		}
+
+		.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 160, 0, 0.7);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 160, 0, 1);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		a:focus,
+		input:focus,
+		select:focus,
+		textarea:focus {
+			outline: 1px solid -webkit-focus-ring-color;
+			outline-offset: -1px;
+		}
+
+		hr {
+			border: 0;
+			height: 2px;
+			border-bottom: 2px solid;
+		}
+
+		h1 {
+			padding-bottom: 0.3em;
+			line-height: 1.2;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-weight: normal;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		table>thead>tr>th {
+			text-align: left;
+			border-bottom: 1px solid;
+		}
+
+		table>thead>tr>th,
+		table>thead>tr>td,
+		table>tbody>tr>th,
+		table>tbody>tr>td {
+			padding: 5px 10px;
+		}
+
+		table>tbody>tr+tr>td {
+			border-top: 1px solid;
+		}
+
+		blockquote {
+			margin: 0 7px 0 5px;
+			padding: 0 16px 0 10px;
+			border-left-width: 5px;
+			border-left-style: solid;
+		}
+
+		code {
+			font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+			font-size: 1em;
+			line-height: 1.357em;
+		}
+
+		body.wordWrap pre {
+			white-space: pre-wrap;
+		}
+
+		pre:not(.hljs),
+		pre.hljs code>div {
+			padding: 16px;
+			border-radius: 3px;
+			overflow: auto;
+		}
+
+		pre code {
+			color: var(--vscode-editor-foreground);
+			tab-size: 4;
+		}
+
+		/** Theming */
+
+		.vscode-light pre {
+			background-color: rgba(220, 220, 220, 0.4);
+		}
+
+		.vscode-dark pre {
+			background-color: rgba(10, 10, 10, 0.4);
+		}
+
+		.vscode-high-contrast pre {
+			background-color: rgb(0, 0, 0);
+		}
+
+		.vscode-high-contrast h1 {
+			border-color: rgb(0, 0, 0);
+		}
+
+		.vscode-light table>thead>tr>th {
+			border-color: rgba(0, 0, 0, 0.69);
+		}
+
+		.vscode-dark table>thead>tr>th {
+			border-color: rgba(255, 255, 255, 0.69);
+		}
+
+		.vscode-light h1,
+		.vscode-light hr,
+		.vscode-light table>tbody>tr+tr>td {
+			border-color: rgba(0, 0, 0, 0.18);
+		}
+
+		.vscode-dark h1,
+		.vscode-dark hr,
+		.vscode-dark table>tbody>tr+tr>td {
+			border-color: rgba(255, 255, 255, 0.18);
+		}
+	</style>
+
+	<style>
+		/* Tomorrow Theme */
+		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+		/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+		/* Tomorrow Comment */
+		.hljs-comment,
+		.hljs-quote {
+			color: #8e908c;
+		}
+
+		/* Tomorrow Red */
+		.hljs-variable,
+		.hljs-template-variable,
+		.hljs-tag,
+		.hljs-name,
+		.hljs-selector-id,
+		.hljs-selector-class,
+		.hljs-regexp,
+		.hljs-deletion {
+			color: #c82829;
+		}
+
+		/* Tomorrow Orange */
+		.hljs-number,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-literal,
+		.hljs-type,
+		.hljs-params,
+		.hljs-meta,
+		.hljs-link {
+			color: #f5871f;
+		}
+
+		/* Tomorrow Yellow */
+		.hljs-attribute {
+			color: #eab700;
+		}
+
+		/* Tomorrow Green */
+		.hljs-string,
+		.hljs-symbol,
+		.hljs-bullet,
+		.hljs-addition {
+			color: #718c00;
+		}
+
+		/* Tomorrow Blue */
+		.hljs-title,
+		.hljs-section {
+			color: #4271ae;
+		}
+
+		/* Tomorrow Purple */
+		.hljs-keyword,
+		.hljs-selector-tag {
+			color: #8959a8;
+		}
+
+		.hljs {
+			display: block;
+			overflow-x: auto;
+			color: #4d4d4c;
+			padding: 0.5em;
+		}
+
+		.hljs-emphasis {
+			font-style: italic;
+		}
+
+		.hljs-strong {
+			font-weight: bold;
+		}
+	</style>
+
+	<style>
+		/*
+ * Markdown PDF CSS
+ */
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+			padding: 0 12px;
+		}
+
+		pre {
+			background-color: #f8f8f8;
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			overflow-x: auto;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
+		}
+
+		pre:not(.hljs) {
+			padding: 23px;
+			line-height: 19px;
+		}
+
+		blockquote {
+			background: rgba(127, 127, 127, 0.1);
+			border-color: rgba(0, 122, 204, 0.5);
+		}
+
+		.emoji {
+			height: 1.4em;
+		}
+
+		code {
+			font-size: 14px;
+			line-height: 19px;
+		}
+
+		/* for inline code */
+		:not(pre):not(.hljs)>code {
+			color: #C9AE75;
+			/* Change the old color so it seems less like an error */
+			font-size: inherit;
+		}
+
+		/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+		.page {
+			page-break-after: always;
+		}
+	</style>
+
+	<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script> -->
+</head>
+
+<!-- <body>
+	<script>
+		mermaid.initialize({
+			startOnLoad: true,
+			theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+				? 'dark'
+				: 'default'
+		});
+	</script>
+	<h1 id="%EB%B6%81%ED%82%A4%ED%83%80%EC%B9%B4">북키타카</h1>
+	<p>독후활동지를 판매하기 위한 목적의 웹사이트입니다.
+		<br>참여 인원 : 6명
+	</p>
+	<h3 id="%EB%A7%81%ED%81%AC--httpsbookitakastore">링크 : <a href="https://bookitaka.store"
+			title="북키타카">https://bookitaka.store</a></h3>
+	<p><br><br></p>
+	<h2 id="1-%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0">1. 사용 기술</h2>
+	<ul>
+		<li>Java 11</li>
+		<li>JavaScript</li>
+		<li>Spring Boot 2.7.11</li>
+		<li>Gradle</li>
+		<li>Spring Data JPA 2.7.11</li>
+		<li>QueryDSL 5.0.0</li>
+		<li>Spring Security 5.7.8</li>
+		<li>Thymeleaf 3.0.15</li>
+		<li>JUnit 4</li>
+		<li>AWS EC2 (Ubuntu 22.04)</li>
+		<li>AWS RDS (MySQL 8.0)</li>
+		<li>Docker</li>
+		<li>Shell Script</li>
+		<li>Cron, Anacron</li>
+		<li>Mysqldump</li>
+		<li>GitLab Flow</li>
+	</ul>
+	<img width="700"
+		src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/a88fa93a-e9a8-4cbc-9f5d-3a3cf630ad73">
+	<p><br><br></p>
+	<h2 id="2-erd-%EC%84%A4%EA%B3%84">2. ERD 설계</h2>
+	<img width="700"
+		src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/a4dfc292-f29b-4752-9cf3-e7dd0a802771">
+	<p><br><br></p>
+	<h2 id="3-%EA%B5%AC%ED%98%84-%EB%82%B4%EC%9A%A9-%EC%9A%94%EC%95%BD">3. 구현 내용 요약</h2>
+	<ul>
+		<li>인증과 인가는 JWT방식으로 Spring Security와 JJWT를 이용했습니다.</li>
+		<li>비밀번호 찾기 시 임시 비밀번호는 Naver Mail SMTP Server를 통해 이메일로 발송됩니다.</li>
+		<li>PG사 결제 모듈 연동은 portOne(I'mport)을 이용했습니다.</li>
+		<li>ISBN 서지정보 API를 이용해 책 정보 입력 시 원하는 책을 검색해서 쉽고 정확하게 입력할 수 있게 했습니다.</li>
+		<li>독후활동지 목록 표시에 여러 정렬 기준이 필요해 QueryDSL을 이용했습니다.</li>
+		<li>독후활동지 PDF 파일 업로드 시 미리보기 파일이 생성되고 원본 파일과 구분되어 저장되는데, 미리보기 파일을 생성하고 저장하는 데에는 PDFBox를, 표시하는 데에는 PDFjs를 이용했습니다.
+		</li>
+	</ul>
+	<p><br><br></p>
+	<h2 id="4-%EA%B5%AC%ED%98%84-%EB%82%B4%EC%9A%A9">4. 구현 내용</h2>
+	<details>
+		<summary><b>사용자</b></summary>
+		<ul>
+			<li>
+				<p>인증과 인가는 JWT방식으로 Spring Security와 JJWT를 이용해 처리했습니다. Access Token은 발급 시 쿠키에 저장하며 HTTP Only 설정을 해 XSS
+					공격에 의한 Access Token 탈취 가능성을 낮추었습니다. 또한 Access Token의 만료 시간을 짧게 하고 Refresh Token을 추가해 Access Token이
+					탈취되었을 경우의 위험성을 낮추었습니다.</p>
+			</li>
+			<li>
+				<p>사용자는 관리자, 회원, 비회원으로 구분됩니다.</p>
+			</li>
+			<li>
+				<p>비밀번호 찾기 기능은 임시 비밀번호 발급 방식으로 구현했습니다. 임시 비밀번호는 난수 예측을 방지하기 위해 SecureRandom으로 생성했습니다. 생성된 임시 비밀번호는 Naver
+					Mail SMTP Server를 통해 이메일로 발송됩니다.</p>
+				<img width="700"
+					src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/8302ecea-6912-4e48-8274-247f87e94544">
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>결제</b></summary>
+		<ul>
+			<li>
+				<p>PG사 결제 모듈 연동은 portOne(I'mport)을 이용했습니다.</p>
+				<img width="700"
+					src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/26a36644-7693-4bca-a77a-eb066c28a253">
+			</li>
+			<li>
+				<p>결제가 완료된 독후활동지 및 쿠폰은 유효 기간이 있으며 유효 기간이 지나면 만료됩니다. 독후활동지 파일을 분실하였는데 만료일이 지났다면 다시 구매를 해야 다운로드가 가능합니다.
+					독후활동지의 유효 기간은 7일, 쿠폰의 유효 기간은 1년입니다.</p>
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>장바구니</b></summary>
+		<ul>
+			<li>
+				<p>장바구니 페이지에서 구매를 하면 구매할 목록을 쿠키에 저장하며 결제 페이지로 이동합니다.</p>
+				<img width="700"
+					src="https://github.com/BeomSeokYu/Nodeul-Project/assets/69231700/c615455f-fdcd-484c-bfe6-29397ecea438">
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>쿠폰</b></summary>
+		<ul>
+			<li>
+				<p>회원은 할인된 가격으로 쿠폰을 구매할 수 있으며 쿠폰 하나당 독후활동지 하나를 구매할 수 있습니다.</p>
+				<img width="700"
+					src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/756fb236-68c3-426d-a0c3-f7447f54d57e">
+			</li>
+			<li>
+				<p>쿠폰은 결제 페이지 내에서 사용 가능합니다.</p>
+				<img width="700"
+					src="https://github.com/BeomSeokYu/Nodeul-Project/assets/69231700/7a2140bf-d980-4b57-a24b-554bd1f03d81">
+			</li>
+			<li>
+				<p>다수의 독후활동지 구매 시 쿠폰을 부분적으로 사용할 경우 쿠폰을 사용하지 않는 독후활동지의 금액만 청구됩니다.</p>
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>독후활동지</b></summary>
+		<ul>
+			<li>
+				<p>관리자는 독후활동지 관련 정보와 함께 이미지 파일과 PDF파일을 업로드해 독후활동지를 등록하거나 등록된 독후활동지를 수정할 수 있습니다. ISBN 서지정보 API를 이용해 원하는
+					책을 검색해서 쉽고 정확하게 입력할 수 있게 했습니다.</p>
+				<img width="700"
+					src="https://github.com/BeomSeokYu/Nodeul-Project/assets/69231700/9fb73f43-6764-4815-94d6-ae81fb366d89">
+			</li>
+			<li>
+				<p>독후활동지를 구매하지 않아도 첫 3 페이지를 미리보기 할 수 있습니다. PDF파일 업로드 시 미리보기 파일이 생성되고 원본 파일과 구분되어 저장됩니다. 미리보기 파일을 생성하고
+					저장하는 데에는 PDFBox를, 표시하는 데에는 PDFjs를 이용했습니다.</p>
+				<img width="700"
+					src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/007e74f7-514c-44e7-954d-ec44af0d40a1">
+			</li>
+			<li>
+				<p>독후활동지 목록 표시에 여러 정렬 기준이 필요해 QueryDSL을 이용했습니다.</p>
+				<img width="700"
+					src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/7e607a76-3614-4197-b608-5fc1f554457c">
+			</li>
+			<li>
+				<p>독후활동지 파일 다운로드 시 관리자가 아니라면 해당 독후활동지 보유 여부 확인 후 다운로드가 진행됩니다.</p>
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>개별출제요청</b></summary>
+		<ul>
+			<li>
+				<p>찾는 독후활동지가 없을 시 관리자에게 출제요청을 할 수 있습니다. ISBN 서지정보 API를 이용해 원하는 책을 검색해서 쉽고 정확하게 입력할 수 있게 했습니다.</p>
+				<img width="700"
+					src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/bb6b77ea-8d7f-46c6-8710-ff10fd67aff0">
+			</li>
+			<li>
+				<p>관리자 페이지 내에서 출제요청 확인과 답변 여부 업데이트가 가능합니다.</p>
+				<img width="700"
+					src="https://github.com/hyeokjulee/Nodeul-Project/assets/122426157/425e3bd2-2141-4556-b22e-f998efe5b50f">
+			</li>
+		</ul>
+	</details>
+
+</body> -->
+
+</html>

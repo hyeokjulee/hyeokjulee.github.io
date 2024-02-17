@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2FEF6MT2K"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-T2FEF6MT2K');
+	</script>
+
+	<title>actswoori</title>
+	<!-- <meta http-equiv="Content-type" content="text/html;charset=UTF-8"> -->
+	<meta http-equiv="refresh" content="0;url=https://github.com/hyeokjulee/actswoori">
+
+	<!-- <style>
+		/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+		/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+		body {
+			font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+			font-size: var(--vscode-markdown-font-size, 14px);
+			padding: 0 26px;
+			line-height: var(--vscode-markdown-line-height, 22px);
+			word-wrap: break-word;
+		}
+
+		#code-csp-warning {
+			position: fixed;
+			top: 0;
+			right: 0;
+			color: white;
+			margin: 16px;
+			text-align: center;
+			font-size: 12px;
+			font-family: sans-serif;
+			background-color: #444444;
+			cursor: pointer;
+			padding: 6px;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+		}
+
+		#code-csp-warning:hover {
+			text-decoration: none;
+			background-color: #007acc;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+		}
+
+		body.scrollBeyondLastLine {
+			margin-bottom: calc(100vh - 22px);
+		}
+
+		body.showEditorSelection .code-line {
+			position: relative;
+		}
+
+		body.showEditorSelection .code-active-line:before,
+		body.showEditorSelection .code-line:hover:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -12px;
+			height: 100%;
+		}
+
+		body.showEditorSelection li.code-active-line:before,
+		body.showEditorSelection li.code-line:hover:before {
+			left: -30px;
+		}
+
+		.vscode-light.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.15);
+		}
+
+		.vscode-light.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.40);
+		}
+
+		.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-dark.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.4);
+		}
+
+		.vscode-dark.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.60);
+		}
+
+		.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 160, 0, 0.7);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 160, 0, 1);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		a:focus,
+		input:focus,
+		select:focus,
+		textarea:focus {
+			outline: 1px solid -webkit-focus-ring-color;
+			outline-offset: -1px;
+		}
+
+		hr {
+			border: 0;
+			height: 2px;
+			border-bottom: 2px solid;
+		}
+
+		h1 {
+			padding-bottom: 0.3em;
+			line-height: 1.2;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-weight: normal;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		table>thead>tr>th {
+			text-align: left;
+			border-bottom: 1px solid;
+		}
+
+		table>thead>tr>th,
+		table>thead>tr>td,
+		table>tbody>tr>th,
+		table>tbody>tr>td {
+			padding: 5px 10px;
+		}
+
+		table>tbody>tr+tr>td {
+			border-top: 1px solid;
+		}
+
+		blockquote {
+			margin: 0 7px 0 5px;
+			padding: 0 16px 0 10px;
+			border-left-width: 5px;
+			border-left-style: solid;
+		}
+
+		code {
+			font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+			font-size: 1em;
+			line-height: 1.357em;
+		}
+
+		body.wordWrap pre {
+			white-space: pre-wrap;
+		}
+
+		pre:not(.hljs),
+		pre.hljs code>div {
+			padding: 16px;
+			border-radius: 3px;
+			overflow: auto;
+		}
+
+		pre code {
+			color: var(--vscode-editor-foreground);
+			tab-size: 4;
+		}
+
+		/** Theming */
+
+		.vscode-light pre {
+			background-color: rgba(220, 220, 220, 0.4);
+		}
+
+		.vscode-dark pre {
+			background-color: rgba(10, 10, 10, 0.4);
+		}
+
+		.vscode-high-contrast pre {
+			background-color: rgb(0, 0, 0);
+		}
+
+		.vscode-high-contrast h1 {
+			border-color: rgb(0, 0, 0);
+		}
+
+		.vscode-light table>thead>tr>th {
+			border-color: rgba(0, 0, 0, 0.69);
+		}
+
+		.vscode-dark table>thead>tr>th {
+			border-color: rgba(255, 255, 255, 0.69);
+		}
+
+		.vscode-light h1,
+		.vscode-light hr,
+		.vscode-light table>tbody>tr+tr>td {
+			border-color: rgba(0, 0, 0, 0.18);
+		}
+
+		.vscode-dark h1,
+		.vscode-dark hr,
+		.vscode-dark table>tbody>tr+tr>td {
+			border-color: rgba(255, 255, 255, 0.18);
+		}
+	</style>
+
+	<style>
+		/* Tomorrow Theme */
+		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+		/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+		/* Tomorrow Comment */
+		.hljs-comment,
+		.hljs-quote {
+			color: #8e908c;
+		}
+
+		/* Tomorrow Red */
+		.hljs-variable,
+		.hljs-template-variable,
+		.hljs-tag,
+		.hljs-name,
+		.hljs-selector-id,
+		.hljs-selector-class,
+		.hljs-regexp,
+		.hljs-deletion {
+			color: #c82829;
+		}
+
+		/* Tomorrow Orange */
+		.hljs-number,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-literal,
+		.hljs-type,
+		.hljs-params,
+		.hljs-meta,
+		.hljs-link {
+			color: #f5871f;
+		}
+
+		/* Tomorrow Yellow */
+		.hljs-attribute {
+			color: #eab700;
+		}
+
+		/* Tomorrow Green */
+		.hljs-string,
+		.hljs-symbol,
+		.hljs-bullet,
+		.hljs-addition {
+			color: #718c00;
+		}
+
+		/* Tomorrow Blue */
+		.hljs-title,
+		.hljs-section {
+			color: #4271ae;
+		}
+
+		/* Tomorrow Purple */
+		.hljs-keyword,
+		.hljs-selector-tag {
+			color: #8959a8;
+		}
+
+		.hljs {
+			display: block;
+			overflow-x: auto;
+			color: #4d4d4c;
+			padding: 0.5em;
+		}
+
+		.hljs-emphasis {
+			font-style: italic;
+		}
+
+		.hljs-strong {
+			font-weight: bold;
+		}
+	</style>
+
+	<style>
+		/*
+ * Markdown PDF CSS
+ */
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+			padding: 0 12px;
+		}
+
+		pre {
+			background-color: #f8f8f8;
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			overflow-x: auto;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
+		}
+
+		pre:not(.hljs) {
+			padding: 23px;
+			line-height: 19px;
+		}
+
+		blockquote {
+			background: rgba(127, 127, 127, 0.1);
+			border-color: rgba(0, 122, 204, 0.5);
+		}
+
+		.emoji {
+			height: 1.4em;
+		}
+
+		code {
+			font-size: 14px;
+			line-height: 19px;
+		}
+
+		/* for inline code */
+		:not(pre):not(.hljs)>code {
+			color: #C9AE75;
+			/* Change the old color so it seems less like an error */
+			font-size: inherit;
+		}
+
+		/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+		.page {
+			page-break-after: always;
+		}
+	</style>
+
+	<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script> -->
+</head>
+
+<!-- <body>
+	<script>
+		mermaid.initialize({
+			startOnLoad: true,
+			theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+				? 'dark'
+				: 'default'
+		});
+	</script>
+	<h1 id="%ED%96%89%EC%A0%84%EC%9A%B0%EB%A6%AC%EA%B5%90%ED%9A%8C">행전우리교회</h1>
+	<p>홈페이지가 없어 홍보 및 운영에 어려움이 있는 개척교회를 돕기 위한 봉사 목적으로 개발되었습니다.
+		<br>참여 인원 : 7명
+	</p>
+	<h3 id="%EB%A7%81%ED%81%AC--httpactswooriorg">링크 : <a href="http://actswoori.org">http://actswoori.org</a></h3>
+	<p><br><br></p>
+	<h2 id="1-%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0">1. 사용 기술</h2>
+	<ul>
+		<li>Java 8</li>
+		<li>JavaScript</li>
+		<li>MyBatis 3.5</li>
+		<li>MariaDB 10.0.21</li>
+		<li>Tomcat 8.5</li>
+		<li>JSP 2.3</li>
+		<li>Servlet 3.1</li>
+		<li>CentOS 7</li>
+		<li>GitLab Flow</li>
+	</ul>
+	<p><br><br></p>
+	<h2 id="2-erd-%EC%84%A4%EA%B3%84">2. ERD 설계</h2>
+	<p><img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/61f503d6-62c9-4f28-947e-f52a295142bb"
+			alt="erd1"></p>
+	<p><br><br></p>
+	<h2 id="3-%EA%B5%AC%ED%98%84-%EB%82%B4%EC%9A%A9">3. 구현 내용</h2>
+	<details>
+		<summary><b>사용자</b></summary>
+		<ul>
+			<li>
+				<p>인증과 인가는 세션 방식으로 처리했으며 사용자는 비회원, 회원, 관리자로 구분됩니다.</p>
+			</li>
+			<li>
+				<p>회원가입 시 관리자의 승인 후 회원가입이 완료됩니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/d74b1df2-31ec-4e24-bb95-f0da57ad7bd8"
+					width="600px">
+			</li>
+			<li>
+				<p>비밀번호를 잊어버린 경우 이메일 인증 후 비밀번호를 다시 설정할 수 있습니다. 메일 발송은 Naver Mail SMTP Server를 통해 처리됩니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/42616535-2b53-4039-ae7a-965806b7925c"
+					width="600px">
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>오시는 길</b></summary>
+		<ul>
+			<li>
+				<p>Kakao Map API를 이용해 교회 위치를 표시했습니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/0d47ff52-21ba-4e91-aca9-39124783d533"
+					width="600px">
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>주보</b></summary>
+		<ul>
+			<li>
+				<p>주보 PDF 파일을 업로드, 다운로드, 열람할 수 있으며 주보 표시는 PDF.js와 iframe 태그를 이용했습니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/1ec55d6a-e6ec-40b0-8f53-4482892ba94f"
+					width="600px">
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>갤러리</b></summary>
+		<ul>
+			<li>
+				<p>Apache Commons IO와 Apache Commons FileUpload를 이용해 사진 등록 시 다중 이미지 파일 업로드가 가능하게 했습니다.</p>
+			</li>
+			<li>
+				<p>Bootstrap을 이용해 썸네일을 표시했습니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/138d1698-0005-41ff-9ba9-f9931ee6b0c4"
+					width="600px">
+			</li>
+			<li>
+				<p>Lightbox를 이용해 자세히 보기 시 원본 이미지를 볼 수 있게 했습니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/4e67ffe7-48b9-4714-8f5c-22bbb742f4a9"
+					width="600px">
+			</li>
+		</ul>
+	</details>
+	<details>
+		<summary><b>일반 게시판</b></summary>
+		<ul>
+			<li>
+				<p>Summernote를 활용해 게시글 작성의 편의성을 높였습니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/d0e8c37c-0f64-4472-bec5-ad0da62e42a3"
+					width="600px">
+			</li>
+			<li>
+				<p>Mybatis 동적 쿼리를 활용해 게시글 목록 개수 조정, 여러 옵션에 대한 검색, 페이징을 처리했습니다.</p>
+				<img src="https://github.com/hyeokjulee/Save-The-Web-actswoori/assets/122426157/c03fb43d-67e1-4493-9d0f-ce4ab2413b63"
+					width="600px">
+			</li>
+		</ul>
+	</details>
+	<p><br><br></p>
+	<h2 id="4-%EC%9A%B4%EC%98%81-%EC%A4%91-%EB%B0%9C%EC%83%9D%ED%95%9C-%EB%AC%B8%EC%A0%9C">4. 운영 중 발생한 문제</h2>
+	<ul>
+		<li>운영 중 서버의 용량이 가득 차는 상황이 발생했었고 원인을 살펴본 결과 10MB 이상의 이미지 파일들이 다수 업로드되어 있는 것을 발견했습니다. 규모가 작은 사이트이므로 용량이 작은 서버를 이용
+			중이지만 서버를 키우는 것보단 파일 용량을 줄이는 것이 더 우선이라고 판단했습니다.</li>
+		<li>이미지 파일 업로드 시 5MB 이상의 파일은 올릴 수 없도록 처리했고 기존의 파일들은 압축 후 교체해 주었습니다. 기존에 업로드되어 있던 이미지 파일들이 전부 JPEG 파일이었기 때문에 기존의
+			이미지 파일 중에 용량이 애초에 크지 않은 파일은 압축이 많이 되지 않도록 하여 기존의 이미지들을 보는 데에는 영향이 없도록 했습니다. 결과적으로 여유 공간은 1.5%에서 41%로 늘렸고 해결
+			방식에서의 사이드 이펙트는 최소화할 수 있었습니다.</li>
+	</ul>
+
+</body> -->
+
+</html>
