@@ -1,14 +1,15 @@
 <html>
 	<head>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2FEF6MT2K"></script>
-		<script defer>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'G-T2FEF6MT2K');
-		</script>
-		<script defer>
-			window.location.replace('http://actswoori.org');
+		<script>
+			function ga(callback) {
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'G-T2FEF6MT2K');
+				callback();
+			}
+			ga(() => { window.location.replace('http://actswoori.org'); });
 		</script>
 	</head>
 </html>
