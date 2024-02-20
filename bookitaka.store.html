@@ -3,13 +3,17 @@
 	<head>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2FEF6MT2K"></script>
 		<script>
-			async function ga(callback) {
-				window.dataLayer = window.dataLayer || [];
-				function gtag() { dataLayer.push(arguments); }
-				gtag('js', new Date());
-				gtag('config', 'G-T2FEF6MT2K');
-			}
-			ga().then(() => { window.location.replace('https://bookitaka.store'); });
+			(async () => {
+				await (() => {
+					window.dataLayer = window.dataLayer || [];
+					function gtag() { dataLayer.push(arguments); }
+					gtag('js', new Date());
+					gtag('config', 'G-T2FEF6MT2K');
+				})();
+				await (() => {
+					window.location.replace('https://bookitaka.store');
+				})();
+			})();
 		</script>
 	</head>
 </html>
