@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>About Me</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="894a9a23-3490-4756-9e83-d1c4432a4603" class="page sans"><header><h1 class="page-title">About Me</h1><p class="page-description"></p></header><div class="page-body"><p id="4943ade3-50d5-4d73-85bd-0c50b764389c" class="">
+</p><div id="b0a758ee-7602-410c-b899-60abac15da02" class="column-list"><div id="e6d0201f-04fe-4aec-a2d8-2b2200b2b3a5" style="width:65.11309562609998%" class="column"><blockquote id="6f62eae0-ad6b-43dd-b782-2f0bee2958cc" class=""><strong>안녕하세요! 주니어 </strong><mark class="highlight-blue"><strong>백엔드</strong></mark><strong> 개발자 </strong><mark class="highlight-teal"><strong>이혁주</strong></mark><strong>입니다.<br/><br/></strong>Java &amp; Spring 기반의 주니어 백엔드 개발자입니다. 개발을 하면서 팀에 도움이 되기 위하여 필요시에는 AWS 인프라 구축 및 주기적, 반복적으로 필요한 작업을 Shell script를 통해 자동화하는 등 인프라 관련 업무를 진행하였습니다. 최근에는 테스트의 중요성을 느끼고 테스트 코드를 작성하여 지속적으로 테스트 코드가 멱등적으로 실행될 수 있도록 CI/CD 환경을 프로젝트에 적용하였습니다. </blockquote><p id="a7c6c6a8-0384-4e0f-ba8c-d8a57d8bbde3" class="">
+</p><hr id="e9c78597-df06-43c9-9b84-8810c52b2d8b"/><p id="bead77d1-04aa-4815-8837-33b98303bbd3" class="">[ <strong><em>📩 Email </em></strong>]<strong><em> </em></strong>dlhjwwe@naver.com</p><p id="30f5bf47-2d52-4a07-a3aa-4a12f482a700" class="">[ <strong><em>☎️ Phone </em></strong>]<strong><em> </em></strong>010-4741-3159</p><p id="4f3bcdfd-bd8e-4e24-964b-a4c00f7a0aff" class="">[ <strong><em>💻 Github </em></strong>]<strong><em> </em></strong><a href="https://github.com/hyeokjulee">https://github.com/hyeokjulee</a></p></div><div id="9e5a78a6-e5a6-4a2a-adcf-cdd558c16b32" style="width:34.88690437390001%" class="column"><figure id="14c454a9-f6a0-4d8f-8f1d-798f9b921937" class="image" style="text-align:left"><a href="AboutMe/%25EC%259D%25B4%25EB%25A0%25A5%25EC%2584%259C_%25EC%2582%25AC%25EC%25A7%2584.jpg"><img style="width:540px" src="AboutMe/%25EC%259D%25B4%25EB%25A0%25A5%25EC%2584%259C_%25EC%2582%25AC%25EC%25A7%2584.jpg"/></a></figure></div></div><hr id="0d2e7d15-763b-4723-92d7-ca1fd5fc6f5e"/><p id="4be68031-9be3-474f-b101-3206b9ce694f" class="">
+</p><h2 id="5d864b45-da7c-42db-a306-9db48f2cdcb8" class="block-color-blue"><em>Skill</em></h2><hr id="b409b88c-5ab0-4b18-ac63-d7255f366548"/><p id="b1aa2ea5-2e8c-4c17-9376-8775f0d82818" class=""><mark class="highlight-teal"><strong>1</strong></mark><strong> </strong>: 입문 수준으로 튜토리얼 정도 진행해본 기술</p><p id="13c34f46-98d2-471d-bf96-f9853b1e0db7" class=""><mark class="highlight-yellow"><strong>2, 3</strong></mark><strong> </strong>: 아주 능숙하지는 않지만 프로젝트에 어느 정도 적용할 수 있는 기술</p><p id="e9f55e88-f1bd-4fec-b267-af23e2bba59f" class=""><mark class="highlight-red"><strong>4, 5</strong></mark><strong> </strong>: 바로 프로젝트에 도입 가능하고 자신이 있는 기술</p><p id="dc80acc1-2f58-4008-8cb9-715558bd9b2a" class="">
+</p><div id="1c69da95-ae05-4d3e-842e-61338387d464" class="column-list"><div id="c4fe4e73-4e94-4f19-9e6d-6b9ce48c1048" style="width:33.333333333333336%" class="column"><h3 id="471f755c-a8c7-4c86-9713-480777993b3e" class=""><mark class="highlight-blue_background">Language</mark></h3><p id="9b0cfc9b-a995-49be-9dee-0aa69cd17c20" class="">Java ( <mark class="highlight-red"><strong>4</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="ccfa01a0-6ecf-4ba8-b5bf-37f07700b983" class="">Kotlin ( <mark class="highlight-yellow"><strong>2 </strong></mark>)</p><p id="a8bf1eeb-1507-4d44-8ba0-d8de97992a78" class="">SQL ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="64b44528-2ecc-4495-939b-a927aafccc94" class="">JS ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="48a9b503-3bb8-4a63-b209-bc7c424dfe5c" class="">HTML ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="45f1470e-8904-447b-aad6-708a91822139" class="">CSS ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="abc712f4-c952-4b41-a473-ba26c2d5a98d" class="">C ( <mark class="highlight-yellow"><strong>2 </strong></mark>)</p><p id="addb6fcb-7ffd-4ec6-970a-5de5f412262b" class="">C++ ( <mark class="highlight-teal"><strong>1</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="ad7e4d38-baf8-4208-8421-58ce8c92ef50" class="">Python ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="a55fa6d6-2656-4aab-b216-5631cb18699f" class="">Shell script ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="5c07b82d-7347-4fd7-888e-4f3499f81efc" class="">
+</p><h3 id="c582387b-865c-443e-8b9e-505e63bcecba" class=""><mark class="highlight-blue_background">DB</mark></h3><p id="27d12ec3-cbef-494c-a862-81acd9adc31d" class="">MySQL ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="915ba418-4fa5-4f89-9c49-566419eee863" class="">MariaDB ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="ac14713f-2dc8-47ff-89fb-15daa157d189" class="">Oracle ( <mark class="highlight-yellow"><strong>2 </strong></mark>)</p><p id="3eca5eec-556a-4fdd-8615-09f76aa4f2ec" class="">PostgreSQL ( <mark class="highlight-teal"><strong>1</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="dea31be6-b3f5-472c-a92d-03c493b749e6" class="">
+</p></div><div id="49b8b838-6931-447f-afc6-c010bf7fca41" style="width:33.333333333333336%" class="column"><h3 id="8b4989f6-9d01-4347-a1d8-9983446217b0" class=""><mark class="highlight-blue_background">Backend</mark></h3><p id="466d7432-75d7-4b1e-b269-9e92b2d0b6f1" class="">Spring Boot ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="63d2d4b2-d755-4a14-b246-561209170b7d" class="">Spring MVC ( <mark class="highlight-red"><strong>4</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="dec199bd-e68a-4add-b3ce-53a0eb0ba427" class="">Spring Security ( <mark class="highlight-yellow"><strong>2 </strong></mark>)</p><p id="36b1be83-8a39-43fe-891f-bf2ad7f022e9" class="">Spring Data JPA ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="95000c51-2755-4dec-af32-2c97cd86346b" class="">JPA ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="532cc4ec-dbc7-4316-b694-959f486bdf56" class="">MyBatis ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="577bfb42-1284-4e3b-92d5-7a9222f9e6ac" class="">JUnit4/5 ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="928f408a-84b4-4822-9813-4c3ff25e86bd" class="">Gradle ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="9952dc77-622c-4687-aa20-0ec5d29d7ea7" class="">Maven ( <mark class="highlight-yellow"><strong>2 </strong></mark>)</p><p id="48bbb674-db0c-460d-8bd8-7698efbb5151" class="">
+</p><h3 id="662eb438-b039-43b1-8d33-98e496a56269" class=""><mark class="highlight-blue_background">Collaboration tool</mark></h3><p id="6d397568-a840-493a-98a8-4583285937f8" class="">Git ( <mark class="highlight-red"><strong>4</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="c8bceace-0f79-4c22-a950-42ccddb3b50a" class="">Notion ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="f36ca152-7951-4e6e-9344-16c22876348a" class="">Google Workspace ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="883c326f-d93b-4ba7-b34e-f69675eac7d0" class="">Discord ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="ba04fd08-58aa-4d6c-b30c-5121a54f1117" class="">Zoom ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p></div><div id="6d66ff6a-c344-4985-8180-88d017c61589" style="width:33.33333333333333%" class="column"><h3 id="c7948b19-2d3a-4daa-a3b5-93cd95bc795b" class=""><mark class="highlight-blue_background">DevOps / Infra</mark></h3><p id="b9089f9d-2a27-4d07-a378-1b02b16e93a1" class="">Github Actions ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="83914958-204d-427f-a3cc-3edc67b46766" class="">Jenkins ( <mark class="highlight-teal"><strong>1</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="88e16baf-7f88-4eb6-aef0-fe573d1bcf18" class="">AWS CodeDeploy ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="ac33136c-21be-46ff-a1c6-761308327e9c" class="">AWS EC2 ( <mark class="highlight-red"><strong>4</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="63e1ab22-e561-4c27-a1d3-a08984508de1" class="">AWS RDS ( <mark class="highlight-red"><strong>4</strong></mark><mark class="highlight-yellow"><strong> </strong></mark>)</p><p id="f555ee75-df67-4f33-9fd2-e4a6d0c328d2" class="">AWS S3 ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="c52acd64-2238-4a91-a911-73fd274d1871" class="">AWS Route53 ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="ba262fa6-6287-4b01-ae01-76b0262ee51e" class="">Docker ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="a4c9836b-460c-4ebf-a3a6-21fd51cf0be1" class="">Docker Compose ( <mark class="highlight-yellow"><strong>2 </strong></mark>)</p><p id="e0506c16-be0a-4637-8882-9097ce137c8f" class="">Apache Tomcat ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="5b3f8e25-8196-4e62-bb32-359a52ba8d78" class="">Nginx ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="29566523-6eac-491e-b775-c94836794c67" class="">Linux Ubuntu ( <mark class="highlight-yellow"><strong>3 </strong></mark>)</p><p id="c8b0f2db-52a8-42f3-ac3f-d31f6eb52071" class="">Linux CentOS ( <mark class="highlight-yellow"><strong>2 </strong></mark>)</p></div></div><h2 id="1d2fc881-5a00-4dcb-83e9-9b2b5fa6409e" class="block-color-blue"><em>Project</em></h2><hr id="2e0785dc-6db0-4c65-8d33-eeed8ec96f6d"/><h3 id="0f7f5d8c-7593-453a-942d-65cec9cfd4cc" class=""><mark class="highlight-teal">북키타카</mark></h3><p id="191fc389-d8d5-41f2-8b90-505d045163b3" class="block-color-gray"><mark class="highlight-default">독후활동지(PDF) 판매 플랫폼</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-default">|</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-gray">백엔드 프로젝트 ( 총 6명 )</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-default">|</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-gray">2023.05 ~ 2023.06</mark></p><p id="74d46af0-1d5f-46e7-9477-9ba6eec321f8" class="">Link : <a href="https://bookitaka.shop">https://bookitaka.shop</a></p><p id="a16230fd-bd86-4916-85b2-350db9cf5199" class="">Github : <a href="https://github.com/hyeokjulee/bookitaka">https://github.com/hyeokjulee/bookitaka</a></p><ul id="03d03fef-6a8f-41f4-a87e-2b959f98f0e9" class="bulleted-list"><li style="list-style-type:disc">개발 및 운영 환경<ul id="6b66c6e7-4116-4f7f-a5ed-e60bce395560" class="bulleted-list"><li style="list-style-type:circle">Java 17 / Spring / JPA / JUnit 4 / Gradle</li></ul><ul id="b30d88f0-2a9e-473c-b48a-1fcabb4c84f1" class="bulleted-list"><li style="list-style-type:circle">MariaDB / Nginx / Github Actions / AWS</li></ul></li></ul><ul id="e12d5a55-af25-49d9-8e06-87aaba0a7733" class="bulleted-list"><li style="list-style-type:disc">핵심 기능<ul id="1b172fca-08b9-42d5-a8cc-cda64d494205" class="bulleted-list"><li style="list-style-type:circle">독후활동지 등록 및 수정<ul id="0187d66e-72bc-4465-b712-5d5e10a70909" class="bulleted-list"><li style="list-style-type:square">이미지 파일, PDF 파일 업로드</li></ul><ul id="60fa9510-ddf0-4aeb-84a5-292d14cea025" class="bulleted-list"><li style="list-style-type:square">ISBN 서지정보 API를 통해 책을 검색해 책 정보를 편리하게 입력 가능</li></ul></li></ul><ul id="cda750f2-ebdd-40ba-9b60-d573021a8650" class="bulleted-list"><li style="list-style-type:circle">독후활동지 구매 및 결제</li></ul><ul id="5854329f-d86d-4c08-b9e8-d77ac18edd07" class="bulleted-list"><li style="list-style-type:circle">여러 독후활동지를 담아서 한 번에 구매할 수 있는 장바구니</li></ul><ul id="88f629ca-b8a6-413c-b232-8e15e3ea8a27" class="bulleted-list"><li style="list-style-type:circle">독후활동지 하나와 교환 가능한 쿠폰</li></ul></li></ul><ul id="d488aec2-bda6-4e71-ad0f-17dad251fd0f" class="bulleted-list"><li style="list-style-type:disc">담당 업무 및 기여 내용<ul id="796cfb17-70d3-4cb2-9e3e-44098839bdac" class="bulleted-list"><li style="list-style-type:circle">데이터 모델링, DB 및 ERD 설계</li></ul><ul id="bb7978b6-fadc-46e9-b1a7-381d0ca6ba10" class="bulleted-list"><li style="list-style-type:circle">네이버 메일 SMTP 서버 연동</li></ul><ul id="c5f6382c-5c60-4f75-80e7-c168225ada03" class="bulleted-list"><li style="list-style-type:circle">쿠폰 기능 개발</li></ul><ul id="3111dae0-bdc9-4df0-9f71-67c655876643" class="bulleted-list"><li style="list-style-type:circle">장바구니 기능 개발</li></ul><ul id="076014ea-c1a8-4af5-97a0-fa6461829949" class="bulleted-list"><li style="list-style-type:circle">구매 기능 개발</li></ul><ul id="d49597c0-c41e-4123-8651-ae47a6782d3b" class="bulleted-list"><li style="list-style-type:circle">JUnit 테스트 코드 작성</li></ul><ul id="25504058-0ed2-4332-ab31-c6f1155dd7e3" class="bulleted-list"><li style="list-style-type:circle">AWS 인프라 구축</li></ul><ul id="aa727285-3ff2-40cd-bfd2-9947c9b6b5e6" class="bulleted-list"><li style="list-style-type:circle">Shell script와 크론을 이용한 DB 백업 자동화</li></ul><ul id="6062d5ac-3d68-4add-acf1-a0553ba8a36e" class="bulleted-list"><li style="list-style-type:circle">깃허브 액션으로 CI/CD 파이프라인 구축</li></ul><ul id="4cb4da02-5152-4ee5-b51a-971dbd5b0b91" class="bulleted-list"><li style="list-style-type:circle">Nginx를 이용한 Blue/Green 무중단 배포</li></ul><ul id="62ad4898-f477-40bb-af42-04a1dfb29613" class="bulleted-list"><li style="list-style-type:circle">Certbot으로 HTTPS 적용 / 크론을 이용해 SSL 인증서 자동 갱신</li></ul><ul id="f42802ff-63ad-4855-9ad4-6e23c541afe0" class="bulleted-list"><li style="list-style-type:circle">AWS 서버 운영</li></ul></li></ul><p id="f4178c27-e460-4c63-b030-a4b5ab34fc8c" class="">
+</p><h3 id="33a47da6-80f6-406f-92ea-162f17077c45" class=""><mark class="highlight-teal">배빵빵</mark></h3><p id="9527910f-166c-426c-ad20-9deef78a205f" class="block-color-gray"><mark class="highlight-default">디저트 카페 리뷰 및 정보 제공 플랫폼</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-default">|</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-gray">백엔드 프로젝트 ( 총 5명 )</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-default">|</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-gray">2023.03 ~ 2023.04</mark></p><p id="c0580ba1-4ac4-434b-8248-cda88d10c6f6" class="">Github : <a href="https://github.com/hyeokjulee/bbangbbang">https://github.com/hyeokjulee/bbangbbang</a></p><ul id="ae65871f-6826-483e-bfe0-1b137304f041" class="bulleted-list"><li style="list-style-type:disc">개발 및 운영 환경<ul id="ee169a5e-fed0-432b-a43b-49d171287102" class="bulleted-list"><li style="list-style-type:circle">Java 8 / Spring / MyBatis / Maven</li></ul><ul id="c8ee8ad8-937e-4917-89d2-31b255f54425" class="bulleted-list"><li style="list-style-type:circle">MySQL / Tomcat</li></ul></li></ul><ul id="e7f90bc6-bfc7-432f-8324-18a6b188af66" class="bulleted-list"><li style="list-style-type:disc">핵심 기능<ul id="e71b6a22-aecf-44d2-8a52-84a4c58541a1" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">디저트 카페</mark> 리뷰</li></ul><ul id="5b1efbd3-9760-4df1-8b16-41d7b14795e4" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">디저트 카페</mark> 정보 조회</li></ul><ul id="0608ba5c-40e1-4616-9e70-4aa125365a1e" class="bulleted-list"><li style="list-style-type:circle">Kakao 지도 API를 통해 내 위치를 기반으로 주변 <mark class="highlight-default">디저트 카페</mark> 위치 표시</li></ul></li></ul><ul id="35b3bd7b-d3f0-4467-8cd3-91ad4e3cd688" class="bulleted-list"><li style="list-style-type:disc">담당 업무 및 기여 내용<ul id="97d0b83e-cff9-400f-89ff-e2053349106a" class="bulleted-list"><li style="list-style-type:circle">데이터 모델링, DB 및 ERD 설계</li></ul><ul id="fc678843-7caf-45dc-bdba-e0631736faee" class="bulleted-list"><li style="list-style-type:circle">웹 크롤링 및 공공 데이터를 활용해 데이터 수집, 가공, 저장</li></ul><ul id="927964ba-d240-4a19-8a16-5080107edd01" class="bulleted-list"><li style="list-style-type:circle">관리자 페이지 및 회원 파트 개발</li></ul><ul id="c0ff4308-1267-475b-b391-77569a00edef" class="bulleted-list"><li style="list-style-type:circle">Gmail SMTP 서버 연동</li></ul><ul id="93bca121-6916-464c-8230-63a3612e3d33" class="bulleted-list"><li style="list-style-type:circle">Kakao 지도 API 연동</li></ul></li></ul><p id="4a88cd69-5351-4d6b-9282-e0a4218da956" class="">
+</p><h3 id="84f01217-31c8-40d8-85b3-4f64b94dc4f3" class=""><mark class="highlight-teal">행전우리교회</mark></h3><p id="47dbe6ba-7d8e-4683-8f8e-ccb729fd9b99" class="block-color-gray"><mark class="highlight-default">행전우리교회 웹사이트</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-default">|</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-gray">백엔드 프로젝트 ( 총 7명 )</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-default">|</mark><mark class="highlight-default"><em> </em></mark><mark class="highlight-gray">2023.01 ~ 2023.02</mark></p><p id="bd0843e6-c888-4964-953a-d93f2e3e33a7" class="">Link : <a href="http://actswoori.org">http://actswoori.org</a></p><p id="8b0e054c-12a1-49c5-91ca-290771d6fecc" class="">Github : <a href="https://github.com/hyeokjulee/actschurch">https://github.com/hyeokjulee/actschurch</a></p><ul id="532a28d1-2902-4b70-88e8-9747b1218d1c" class="bulleted-list"><li style="list-style-type:disc">개발 및 운영 환경<ul id="f57c1db8-dd2f-4ac3-8f6b-09b4a2eb5a62" class="bulleted-list"><li style="list-style-type:circle">Java 8 / JSP / Servlet / MyBatis</li></ul><ul id="c148a83f-6deb-4743-b026-80f3df1321d9" class="bulleted-list"><li style="list-style-type:circle">MariaDB / Tomcat</li></ul></li></ul><ul id="ba4629d0-8b03-4dea-822f-821c841ab4e4" class="bulleted-list"><li style="list-style-type:disc">핵심 기능<ul id="80bc961f-f72b-4ab0-b1d3-b77359e89b9f" class="bulleted-list"><li style="list-style-type:circle">다중 이미지 파일 업로드가 가능한 갤러리</li></ul><ul id="694d2d0e-1082-42d1-a653-d819a0ab8638" class="bulleted-list"><li style="list-style-type:circle">PDF 파일 업로드, 다운로드, 열람이 가능한 주보</li></ul><ul id="1b0f70c5-2d11-4d7f-87d6-bc3c1df570e9" class="bulleted-list"><li style="list-style-type:circle">Kakao 지도 API를 통해 교회의 위치를 볼 수 있는 오시는 길</li></ul></li></ul><ul id="885d93e7-4a0f-4b10-8e33-1f6ac271bd69" class="bulleted-list"><li style="list-style-type:disc">담당 업무 및 기여 내용<ul id="c3ef6a94-b636-4054-bbed-7449d2f5940e" class="bulleted-list"><li style="list-style-type:circle">데이터 모델링, DB 및 ERD 설계</li></ul><ul id="a3661f69-fedc-4d19-a63e-c3be5ce1f3d5" class="bulleted-list"><li style="list-style-type:circle">게시판 기능 구현</li></ul><ul id="9e69a5cb-c16a-4815-97e2-170b5b98d2e7" class="bulleted-list"><li style="list-style-type:circle">카카오 로그인 구현</li></ul><ul id="6baf2233-b4be-43e1-b7bf-d21bfb68637d" class="bulleted-list"><li style="list-style-type:circle">네이버 메일 SMTP 서버 연동</li></ul><ul id="d3d4f5a5-746b-4af7-b824-b079e667769e" class="bulleted-list"><li style="list-style-type:circle">Kakao 지도 API 연동</li></ul><ul id="e5245335-6c11-4c2a-9e98-09a658aad25f" class="bulleted-list"><li style="list-style-type:circle">서버 구축</li></ul><ul id="b1bc133e-1176-4324-8214-3f9dec30e559" class="bulleted-list"><li style="list-style-type:circle">운영 및 유지보수</li></ul></li></ul><p id="b1dd69d5-380a-4afc-b5ef-37f2ef5d7acc" class="">
+</p><h2 id="173dfcdf-112e-4434-ba00-0866432e88f1" class="block-color-blue"><em>Education</em></h2><hr id="f5b58e94-460d-45dd-8e03-3adad33af408"/><h3 id="bedfcfa3-517a-4049-9656-f5155f5a9c2f" class="">국비지원교육 수료</h3><p id="fa3a3254-0649-4e24-a6c2-1b6306a4cad6" class="">쌍용교육센터 | <mark class="highlight-gray">2022.10 ~ 2023.04</mark></p><ul id="d07e1243-4c0d-4cf5-8cea-4db64b87162f" class="bulleted-list"><li style="list-style-type:disc">부족한 CS 지식을 보완하기 위해 인터넷 강의를 통해 자료구조, 알고리즘, 운영체제, 네트워크 등 컴퓨터 공학 전공 과목 독학</li></ul><p id="a8410b59-03e2-46d5-9e16-c3912f34a210" class="">
+</p><h3 id="8219012b-0148-408e-97a5-30a15ad477c8" class="">충북 대학교 졸업</h3><p id="5bb437ed-2786-427b-a6c1-211298e3b534" class="">기계공학 전공 | 평점 3.9 / 4.5 | <mark class="highlight-gray">2013.03 ~ 2020.02</mark></p><ul id="dd19ff7c-79d0-4317-b50d-abeaf79ea05d" class="bulleted-list"><li style="list-style-type:disc">C, MATLAB, Arduino 프로젝트 다수 경험</li></ul><p id="762e31a5-bce2-4d5e-ba8b-fb30cb9af3b3" class="">
+</p><h3 id="a158dff2-a7ac-4b24-8401-0edd859c3fbe" class=""><strong>충남 고등학교 졸업</strong></h3><p id="314164fd-0412-4b38-a59b-425c2811a470" class="">이과 | <mark class="highlight-gray">2010.03 ~ 2013.02</mark></p><p id="0933b3b2-0a75-4408-9693-8fe4ca01022d" class="">
+</p><p id="8c45d49c-67b6-40be-a051-29f129edda60" class="">
+</p><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="b1b9bc29-54c6-4ea4-9b20-817a6f9cba74"><div style="font-size:1.5em"><span class="icon">❤️</span></div><div style="width:100%"><em>Thank you for your time!</em></div></figure><p id="8f7aa432-03b9-4ec8-8cf0-cd2c95abf9c0" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
